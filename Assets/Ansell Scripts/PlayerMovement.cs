@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         xDirection = Input.GetAxis("Horizontal");
         xVector = xDirection * wSpeed * Time.deltaTime;
-        Transform.Position = Transform.Position + newVector3(xVector, 0, 0);
+        transform.position = transform.position + new Vector3(xVector, 0, 0);
     }
 
 }

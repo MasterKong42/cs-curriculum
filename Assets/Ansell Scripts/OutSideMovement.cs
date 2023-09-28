@@ -5,12 +5,14 @@ using UnityEngine;
 public class OutSideMovement : MonoBehaviour
 
 {
-    
- public float wSpeed;
- public float xDirection;
- public float xVector;
- public float yDirection;
- public float yVector;
+
+    public float wSpeed;
+    public float xDirection;
+    public float xVector;
+    public float yDirection;
+
+    public float yVector;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,10 @@ public class OutSideMovement : MonoBehaviour
     {
         xDirection = Input.GetAxis("Horizontal");
         xVector = xDirection * wSpeed * Time.deltaTime;
-        Transform.Position = Transform.Position + newVector3(xVector, 0, 0);
-        
+        transform.position = transform.position + new Vector3(xVector, 0, 0);
+
         yDirection = Input.GetAxis("Vertical");
         yVector = yDirection * wSpeed * Time.deltaTime;
-        Transform.Position = Transform.Position + newVector3(yVector, 0, 0);
+        transform.position = transform.position + new Vector3(0,yVector, 0);
     }
 }
