@@ -24,7 +24,7 @@ public class Coin : MonoBehaviour
     void CollectCoin(int amount)
     {
         Coins += amount;
-        Debug.Log("Coins: "+Coins);
+        Debug.Log("You found a Coin...Coins: "+Coins);
     }
 }
 

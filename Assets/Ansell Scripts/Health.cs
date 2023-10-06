@@ -10,13 +10,15 @@ public class HealthCode : MonoBehaviour
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
-    private int health = 10;
-    
+    public int health = 10;
+
     private Coin coinpurse;
+
     // Start is called before the first frame update
     void Start()
     {
         iframesTimer = iframesTimerDefault;
+        coinpurse = FindObjectOfType<Coin>();
     }
 
     private void Update()
@@ -55,17 +57,28 @@ public class HealthCode : MonoBehaviour
     void Death()
     {
         coinpurse.Coins = 0;
-        
+
         SceneManager.LoadScene("Start", LoadSceneMode.Single);
-        Debug.Log("You died :( . . . Your Coins  have been rest to ZERO! ");
+        Debug.Log("You died :( . . . Your Coins  have been rest to ZERO and your Health back to TEN! ");
     }
-    
-    
-    
+
+
+
     void ChangeHealth(int amount)
     {
         health += amount;
-        Debug.Log("Health: "+health);
+        Debug.Log("Health: " + health);
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Potion"))
+        {
+            ChangeHealth(1);
+            Destroy(other.gameObject);
+            Debug.Log("You found a Red Potion, those heal you!");
+
+        }
     }
 }

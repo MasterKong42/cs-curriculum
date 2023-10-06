@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Coins.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Coins.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +19,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/Coins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/HUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -101,7 +100,8 @@
       <workItem from="1695926059447" duration="14000" />
       <workItem from="1695926110675" duration="1672000" />
       <workItem from="1696268995940" duration="3156000" />
-      <workItem from="1696441169558" duration="4914000" />
+      <workItem from="1696441169558" duration="4970000" />
+      <workItem from="1696612801862" duration="4456000" />
     </task>
     <servers />
   </component>
