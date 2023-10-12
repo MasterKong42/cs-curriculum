@@ -6,11 +6,26 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public Coin coinpurse;
-    public HealthCode health;
-
+    
+    private static HUD hud;
+    
+    public int coins;
+    public int health;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI healthText;
     // Start is called before the first frame update
+    void Awake()
+    {
+        if (hud != null && hud != this) 
+        {
+            Destroy(this);
+        }
+        else
+        {
+            hud = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     void Start()
     {
         
@@ -19,7 +34,7 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinText.text = coinpurse.Coins.ToString();
-        healthText.text = health.health.ToString();
+        coinText.text = coins.ToString();
+        healthText.text = health.ToString();
     }
 }
