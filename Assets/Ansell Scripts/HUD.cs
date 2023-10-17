@@ -18,7 +18,7 @@ public class HUD : MonoBehaviour
     {
         if (hud != null && hud != this) 
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {

@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HealthCode : MonoBehaviour
+public class Fireball : MonoBehaviour
 {
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
@@ -36,27 +36,9 @@ public class HealthCode : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Spikes"))
-        {
-            if (!iframes)
-            {
-                ChangeHealth(-1);
-                iframes = true;
-            }
+   
 
-            if (hud.health < 1)
-            {
-                Death();
-            }
-            
-
-        }
-        
-    }
- 
-    void OnTriggerEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.gameObject.CompareTag("Fireball"))
@@ -68,17 +50,11 @@ public class HealthCode : MonoBehaviour
                 iframes = true;
             }
             
+            
         }
     }
 
-    void Death()
-    {
-        hud.coins = 0;
-        hud.health = 10;
 
-        SceneManager.LoadScene("Start", LoadSceneMode.Single);
-        Debug.Log("You died :( . . . Your Coins  have been rest to ZERO and your Health back to TEN! ");
-    }
 
 
 
@@ -89,14 +65,6 @@ public class HealthCode : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Potion"))
-        {
-            ChangeHealth(1);
-            Destroy(other.gameObject);
-            Debug.Log("You found a Red Potion, those heal you!");
-
-        }
-    }
+    
 }
+

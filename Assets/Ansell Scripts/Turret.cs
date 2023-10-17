@@ -22,6 +22,7 @@ public class Turret : MonoBehaviour
         if (other.gameObject.CompareTag("Player"));
         {
             timer -= Time.deltaTime;
+            
         }
     }
     // Update is called once per frame
