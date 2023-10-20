@@ -6,38 +6,59 @@ using UnityEngine.UIElements;
 
 public class Turret : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject Fireball ;
+    public Transform firePoint;
+    public GameObject turretProjectile;
+    public bool isInRange;
+    public float initialTime;
+    public Transform target;
     public float timer;
- 
-    public float inttimer;
+
+    
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        timer = 1;
         
+        initialTime = 3;
+        timer = initialTime;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"));
+        if (other.CompareTag("Player"))
         {
-            timer -= Time.deltaTime;
-            
+            isInRange = true;
         }
     }
-    // Update is called once per frame
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isInRange = false;
+        }
+    }
+
     void Update()
     {
-        if (timer < 0) ;
+        if (timer > 0)
         {
-            GameObject projectile = Instantiate(Fireball, transform.position, Quaternion.identity);
-            Vector3 target = Player.transform.position;
-            projectile.transform.Translate(target);
-            timer = inttimer;
-
+            timer -= Time.deltaTime;
         }
-        
+        else
+        {
+            if (isInRange)
+            {
+                fire();
+            }
+        }
     }
 
-   
+    void fire()
+    {
+            
+        Instantiate(turretProjectile, firePoint.position, firePoint.rotation);
+
+        Debug.Log("fire");
+
+        timer=initialTime;
+    }
+    
 }

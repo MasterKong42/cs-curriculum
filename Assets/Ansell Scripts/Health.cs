@@ -10,7 +10,7 @@ public class HealthCode : MonoBehaviour
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
-    
+
 
     public HUD hud;
 
@@ -50,24 +50,32 @@ public class HealthCode : MonoBehaviour
             {
                 Death();
             }
-            
+
 
         }
-        
+
     }
- 
-    void OnTriggerEnter2D(Collision2D other)
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         if (other.gameObject.CompareTag("Fireball"))
         {
             if (!iframes)
             {
                 ChangeHealth(-1);
-                Destroy(other.gameObject);
                 iframes = true;
             }
-            
+            Destroy(other.gameObject);
+
+        }
+
+        if (other.gameObject.CompareTag("Potion"))
+        {
+            ChangeHealth(1);
+            Destroy(other.gameObject);
+            Debug.Log("You found a Red Potion, those heal you!");
+
         }
     }
 
@@ -88,15 +96,6 @@ public class HealthCode : MonoBehaviour
         Debug.Log("Health: " + hud.health);
 
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Potion"))
-        {
-            ChangeHealth(1);
-            Destroy(other.gameObject);
-            Debug.Log("You found a Red Potion, those heal you!");
-
-        }
-    }
 }
+
+   

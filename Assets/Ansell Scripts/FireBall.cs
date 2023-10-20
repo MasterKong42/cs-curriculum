@@ -7,64 +7,37 @@ using UnityEngine.SceneManagement;
 
 public class Fireball : MonoBehaviour
 {
-    private float iframesTimer;
-    private float iframesTimerDefault = 1.5f;
-    private bool iframes = false;
+    public float destroyDelay = 2.0f;
     
-
-    public HUD hud;
-
-    // Start is called be   fore the first frame update
+    // Start is called before the first frame update
     void Start()
     {
-        iframesTimer = iframesTimerDefault;
-        hud = FindObjectOfType<HUD>();
+        Invoke("DestroyBullet", destroyDelay);
     }
-
-    private void Update()
-    {
-        if (iframes)
-        {
-            iframesTimer -= Time.deltaTime;
-            if (iframesTimer < 0)
-            {
-                iframes = false;
-                //reset the timer
-                iframesTimer = iframesTimerDefault;
-            }
-        }
-    }
-
-    // Update is called once per frame
-   
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.gameObject.CompareTag("Fireball"))
+        if (other.gameObject.CompareTag("wall"))
         {
-            if (!iframes)
-            {
-                ChangeHealth(-1);
-                Destroy(other.gameObject);
-                iframes = true;
-            }
-            
-            
+            DestroyBullet();
         }
+        
     }
-
-
-
-
-
-    void ChangeHealth(int amount)
-    {
-        hud.health += amount;
-        Debug.Log("Health: " + hud.health);
-
-    }
-
     
-}
 
+    public float projectileSpeed;
+    // Update is called once per frame
+    private void Update()
+    {
+        
+        transform.Translate(new Vector2( projectileSpeed*Time.deltaTime,0.0f));
+       
+        
+
+    }
+    void DestroyBullet()
+    {
+        // Destroy the bullet game object
+        Destroy(gameObject);
+    }
+}

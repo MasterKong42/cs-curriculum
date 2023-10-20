@@ -9,6 +9,7 @@ TagManager:
   - Axe
   - Spikes
   - Potion
+  - Fireball
   layers:
   - Default
   - TransparentFX
