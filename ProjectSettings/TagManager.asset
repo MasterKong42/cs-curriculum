@@ -10,6 +10,7 @@ TagManager:
   - Spikes
   - Potion
   - Fireball
+  - wall
   layers:
   - Default
   - TransparentFX

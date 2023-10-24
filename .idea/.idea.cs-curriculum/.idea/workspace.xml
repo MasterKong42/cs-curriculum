@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/FireBall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Turret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/poá∆o azul.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/poá∆o azul.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/MobileEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/MobileEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -25,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/Coins.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/FireBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/HUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/OrcTrail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ansell Scripts/Trackplayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -111,7 +112,8 @@
       <workItem from="1696959475435" duration="3741000" />
       <workItem from="1697132716678" duration="3301000" />
       <workItem from="1697563332722" duration="4384000" />
-      <workItem from="1697822276062" duration="2039000" />
+      <workItem from="1697822276062" duration="2766000" />
+      <workItem from="1698168901930" duration="3642000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthCode : MonoBehaviour
 {
+    private float ipotion;
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
@@ -77,6 +78,17 @@ public class HealthCode : MonoBehaviour
             Debug.Log("You found a Red Potion, those heal you!");
 
         }
+        
+        if (other.gameObject.CompareTag("IPotion"))
+        {
+
+            iframesTimer = 10f;
+            iframes = true;
+            Destroy(other.gameObject);
+            Debug.Log("You found a Blue Potion, those give you invincibility for 10 seconds");
+
+        }
+    
     }
 
     void Death()
