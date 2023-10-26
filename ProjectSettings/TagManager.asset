@@ -11,6 +11,8 @@ TagManager:
   - Potion
   - Fireball
   - wall
+  - wayPoint
+  - IPotion
   layers:
   - Default
   - TransparentFX

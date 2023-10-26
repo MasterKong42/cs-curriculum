@@ -54,6 +54,21 @@ public class HealthCode : MonoBehaviour
 
 
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (!iframes)
+            {
+                ChangeHealth(-2);
+                iframes = true;
+            }
+
+            if (hud.health < 1)
+            {
+                Death();
+            }
+
+
+        }
 
     }
 
