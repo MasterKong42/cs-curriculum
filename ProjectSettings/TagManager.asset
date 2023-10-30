@@ -13,6 +13,7 @@ TagManager:
   - wall
   - wayPoint
   - IPotion
+  - MobileEnemy
   layers:
   - Default
   - TransparentFX

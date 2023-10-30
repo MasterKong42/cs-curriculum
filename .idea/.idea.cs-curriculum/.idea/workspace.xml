@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/BluePotion.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/BluePotion.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/IframesPotion.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Extra/All Potions/Blue potions/IframesPotion.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/MobileEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/MobileEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -115,7 +112,8 @@
       <workItem from="1697563332722" duration="4384000" />
       <workItem from="1697822276062" duration="2766000" />
       <workItem from="1698168901930" duration="3642000" />
-      <workItem from="1698342564732" duration="2052000" />
+      <workItem from="1698342564732" duration="2857000" />
+      <workItem from="1698686975352" duration="3900000" />
     </task>
     <servers />
   </component>

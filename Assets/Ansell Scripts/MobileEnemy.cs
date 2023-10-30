@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using Object = UnityEngine.Object;
 
-public class MobileEnemy : MonoBehaviour
+public class Orc : MonoBehaviour
 {
 
 
@@ -16,6 +16,7 @@ public class MobileEnemy : MonoBehaviour
     private float iframesTimer;
     private float iframesTimerDefault = 1;
     private bool iframes = false;
+    private CircleCollider2D collider;
 
 
 // Start is called before the first frame update
@@ -23,23 +24,27 @@ public class MobileEnemy : MonoBehaviour
     {
         iframesTimer = iframesTimerDefault;
         OrcHealth = 5;
-
-
+        collider = gameObject.GetComponent<CircleCollider2D>();
+        collider.radius = 3;
     }
-
-    void OnTriggerStay2D(Collider2D other)
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            collider.radius = collider.radius + 1.3f;
             isInRange = true;
         }
+       
     }
+    
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             isInRange = false;
+            
         }
     }
 
@@ -68,10 +73,13 @@ public class MobileEnemy : MonoBehaviour
         }
 
     }
+    
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        
+        
+        if (other.gameObject.CompareTag("Player"))
         {
             if (!iframes)
             {
@@ -86,15 +94,30 @@ public class MobileEnemy : MonoBehaviour
 
 
         }
-
-
-        void ChangeOrcHealth(int amount)
+        if (other.gameObject.CompareTag("PlayerBullet"))
         {
-            OrcHealth += amount;
-            Debug.Log("OrcHealth: " + OrcHealth);
+            Destroy(other.gameObject);
+            if (!iframes)
+            {
+                ChangeOrcHealth(-2);
+                iframes = true;
+            }
 
+            if (OrcHealth < 1)
+            {
+                Destroy(gameObject);
+            }
+            
+            
         }
+
+        
+
+    }
+    void ChangeOrcHealth(int amount)
+    {
+        OrcHealth += amount;
+        Debug.Log("OrcHealth: " + OrcHealth);
 
     }
 }
-
