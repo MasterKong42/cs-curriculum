@@ -15,9 +15,9 @@ public class Fireball : MonoBehaviour
         Invoke("DestroyBullet", destroyDelay);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("wall"))
+        if (collision.gameObject.CompareTag("MobileEnemy"))
         {
             DestroyBullet();
         }

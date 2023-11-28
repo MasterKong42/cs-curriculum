@@ -25,8 +25,57 @@ public class Orc : MonoBehaviour
         iframesTimer = iframesTimerDefault;
         OrcHealth = 5;
         collider = gameObject.GetComponent<CircleCollider2D>();
-        collider.radius = 3;
+        collider.radius = 4.5f;
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (!iframes)
+            {
+                ChangeOrcHealth(-1);
+                iframes = true;
+            }
+
+            if (OrcHealth < 1)
+            {
+                Destroy(gameObject);
+            }
+
+        }
+
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            if (!iframes)
+            {
+                ChangeOrcHealth(-2);
+                iframes = true;
+                collider.radius = collider.radius + 1;
+            }
+            //collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
+
+        }
+
+    }
+
+    void ChangeOrcHealth(int amount)
+        {
+            OrcHealth += amount;
+            Debug.Log("OrcHealth: " + OrcHealth);
+            if (OrcHealth < 1)
+            {
+                Destroy(gameObject);
+            }
+        }
+        
+        
+        
+
+    
     
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,9 +84,9 @@ public class Orc : MonoBehaviour
             collider.radius = collider.radius + 1.3f;
             isInRange = true;
         }
-       
+            
+            
     }
-    
 
     void OnTriggerExit2D(Collider2D other)
     {
@@ -75,49 +124,5 @@ public class Orc : MonoBehaviour
     }
     
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        
-        
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (!iframes)
-            {
-                ChangeOrcHealth(-1);
-                iframes = true;
-            }
 
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-            }
-
-
-        }
-        if (other.gameObject.CompareTag("PlayerBullet"))
-        {
-            Destroy(other.gameObject);
-            if (!iframes)
-            {
-                ChangeOrcHealth(-2);
-                iframes = true;
-            }
-
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-            }
-            
-            
-        }
-
-        
-
-    }
-    void ChangeOrcHealth(int amount)
-    {
-        OrcHealth += amount;
-        Debug.Log("OrcHealth: " + OrcHealth);
-
-    }
 }

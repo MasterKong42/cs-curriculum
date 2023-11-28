@@ -14,6 +14,7 @@ TagManager:
   - wayPoint
   - IPotion
   - MobileEnemy
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
