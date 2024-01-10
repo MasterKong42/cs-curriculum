@@ -22,7 +22,6 @@ public class Shoot : MonoBehaviour
         {
             timer -= Time.deltaTime;
             
-            
         }
 
         if (timer < 0)

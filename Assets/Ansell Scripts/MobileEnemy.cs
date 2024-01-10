@@ -17,8 +17,13 @@ public class Orc : MonoBehaviour
     private float iframesTimerDefault = 1;
     private bool iframes = false;
     private CircleCollider2D collider;
+    public GameObject Coin;
+    public GameObject HealthSquare;
+    private int Number;
+    private float numTimer = 0.1f;
+    public bool numTimerIsRunning = false;
 
-
+    
 // Start is called before the first frame update
     private void Start()
     {
@@ -26,9 +31,14 @@ public class Orc : MonoBehaviour
         OrcHealth = 5;
         collider = gameObject.GetComponent<CircleCollider2D>();
         collider.radius = 4.5f;
+        Number = 1;
+        numTimerIsRunning = true;
     }
 
-
+    private void numberTimerReset()
+    {
+        numTimer = 0.1f;
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -40,22 +50,16 @@ public class Orc : MonoBehaviour
                 iframes = true;
             }
 
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-            }
+            
 
         }
 
-        if (collision.gameObject.CompareTag("PlayerBullet"))
+        if (collision.gameObject.CompareTag("Fireball"))
         {
-            if (!iframes)
-            {
-                ChangeOrcHealth(-2);
-                iframes = true;
-                collider.radius = collider.radius + 1;
-            }
-            //collision.gameObject.SetActive(false);
+            ChangeOrcHealth(-2);
+            iframes = true;
+            collider.radius = collider.radius + 1;
+            
             Destroy(collision.gameObject);
 
         }
@@ -66,17 +70,16 @@ public class Orc : MonoBehaviour
         {
             OrcHealth += amount;
             Debug.Log("OrcHealth: " + OrcHealth);
-            if (OrcHealth < 1)
+            if (OrcHealth <= 0)
             {
-                Destroy(gameObject);
+                Death();
             }
         }
+    void ChangeNumber(int amount)
+    {
+        Number += amount;
         
-        
-        
-
-    
-    
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -85,7 +88,7 @@ public class Orc : MonoBehaviour
             isInRange = true;
         }
             
-            
+      
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -95,6 +98,23 @@ public class Orc : MonoBehaviour
             isInRange = false;
             
         }
+    }
+
+    void Death()
+    {
+        print("orc died");
+        Destroy(gameObject);
+        if (Number == 1)
+        {
+            Instantiate(HealthSquare, transform.position, transform.rotation);
+        }
+        if (Number == 2)
+        {
+            Instantiate(Coin, transform.position, transform.rotation);
+        }
+
+        
+        
     }
 
     public float orcSpeed;
@@ -120,7 +140,32 @@ public class Orc : MonoBehaviour
                 iframesTimer = iframesTimerDefault;
             }
         }
+        
+        if (numTimerIsRunning)
+        {
+            numTimer -= Time.deltaTime;
 
+            if (numTimer < 0)
+            {
+                if (Number == 1)
+                {
+                    numberTimerReset();
+                    ChangeNumber(+1);
+                }
+                else
+                {
+                    numberTimerReset();
+                    ChangeNumber(-1);
+                }
+            }
+        }
+        
+        if (OrcHealth < 1)
+        {
+            Death();
+        }
+
+       
     }
     
 

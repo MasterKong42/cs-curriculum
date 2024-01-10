@@ -54,7 +54,7 @@ public class HealthCode : MonoBehaviour
 
 
         }
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("MobileEnemy"))
         {
             if (!iframes)
             {
@@ -121,7 +121,6 @@ public class HealthCode : MonoBehaviour
     {
         hud.health += amount;
         Debug.Log("Health: " + hud.health);
-
     }
 }
 
