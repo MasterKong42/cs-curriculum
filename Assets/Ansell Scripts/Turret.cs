@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class Turret : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject turretProjectile;
+    public GameObject turretFireball;
     public bool isInRange;
     public float initialTime;
     public Transform target;
@@ -54,7 +54,7 @@ public class Turret : MonoBehaviour
     void fire()
     {
             
-        Instantiate(turretProjectile, firePoint.position, firePoint.rotation);
+        Instantiate(turretFireball, firePoint.position, firePoint.rotation);
 
         Debug.Log("fire");
 

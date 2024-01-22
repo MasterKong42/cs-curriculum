@@ -8,8 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/PlayerBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/PlayerBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Turret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/PlayerBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/PlayerBullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +124,8 @@
       <workItem from="1703100880212" duration="161000" />
       <workItem from="1704397437088" duration="770000" />
       <workItem from="1704738947557" duration="3986000" />
+      <workItem from="1704912104402" duration="2094000" />
+      <workItem from="1705948252141" duration="3313000" />
     </task>
     <servers />
   </component>

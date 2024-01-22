@@ -11,7 +11,7 @@ public class HealthCode : MonoBehaviour
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
-
+    
 
     public HUD hud;
 
@@ -76,6 +76,7 @@ public class HealthCode : MonoBehaviour
     {
 
         if (other.gameObject.CompareTag("Fireball"))
+
         {
             if (!iframes)
             {
@@ -85,6 +86,7 @@ public class HealthCode : MonoBehaviour
             Destroy(other.gameObject);
 
         }
+       
 
         if (other.gameObject.CompareTag("Potion"))
         {

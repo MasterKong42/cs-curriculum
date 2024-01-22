@@ -63,6 +63,15 @@ public class Orc : MonoBehaviour
             Destroy(collision.gameObject);
 
         }
+        if (collision.gameObject.CompareTag("PlayerProjectile"))
+        {
+            ChangeOrcHealth(-2);
+            iframes = true;
+            collider.radius = collider.radius + 1;
+            
+            Destroy(collision.gameObject);
+
+        }
 
     }
 

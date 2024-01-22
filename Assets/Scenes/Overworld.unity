@@ -86082,6 +86082,7 @@ MonoBehaviour:
   iposition: {fileID: 629666903}
   Coin: {fileID: 3462362578362087066, guid: 69c7343f050914c7787bbbe42c07b5b8, type: 3}
   HealthSquare: {fileID: 2088957981}
+  numTimerIsRunning: 0
   orcSpeed: 3.5
 --- !u!1001 &1849765336
 PrefabInstance:
@@ -86918,6 +86919,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8537513200224726054}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2088957985
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088957981}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8537513200224726054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86984,7 +87006,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7085273291660983239, guid: 675c1a2120399461d8c8254dfaf07218,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088957985}
   m_SourcePrefab: {fileID: 100100000, guid: 675c1a2120399461d8c8254dfaf07218, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

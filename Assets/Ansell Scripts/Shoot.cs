@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
@@ -13,7 +11,7 @@ public class Shoot : MonoBehaviour
 
     public float timer;
     public Transform firePoint;
-    public GameObject playerProjectile;
+    public GameObject PlayerFireball;
     public float initialTime;
 
     void Update()
@@ -21,7 +19,7 @@ public class Shoot : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
-            
+           
         }
 
         if (timer < 0)
@@ -29,16 +27,15 @@ public class Shoot : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 fire();
-            }  
+            }
         }
-        
 
     }
 
     void fire()
     {
 
-        Instantiate(playerProjectile, firePoint.position, firePoint.rotation);
+        Instantiate(PlayerFireball, firePoint.position, firePoint.rotation);
 
         Debug.Log("fire");
 
