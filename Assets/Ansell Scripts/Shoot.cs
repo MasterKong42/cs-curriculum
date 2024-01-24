@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour
 
     public float timer;
     public Transform firePoint;
-    public GameObject PlayerFireball;
+    public GameObject PlayerProjectile;
     public float initialTime;
 
     void Update()
@@ -35,7 +35,7 @@ public class Shoot : MonoBehaviour
     void fire()
     {
 
-        Instantiate(PlayerFireball, firePoint.position, firePoint.rotation);
+        Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
 
         Debug.Log("fire");
 

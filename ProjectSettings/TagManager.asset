@@ -15,6 +15,7 @@ TagManager:
   - IPotion
   - MobileEnemy
   - PlayerBullet
+  - playerProjectile
   layers:
   - Default
   - TransparentFX
