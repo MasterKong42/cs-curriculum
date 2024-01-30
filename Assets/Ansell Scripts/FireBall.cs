@@ -15,14 +15,14 @@ public class Fireball : MonoBehaviour
         Invoke("DestroyBullet", destroyDelay);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("MobileEnemy"))
-        {
-            DestroyBullet();
-        }
+    //void OnCollisionEnter2D(Collision2D collision)
+   // {
+       //if (collision.gameObject.CompareTag("MobileEnemy"))
+       // {
+           // DestroyBullet();
+        //}
         
-    }
+   // }
     
 
     public float projectileSpeed;

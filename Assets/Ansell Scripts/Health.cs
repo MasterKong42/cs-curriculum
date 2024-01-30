@@ -69,13 +69,7 @@ public class HealthCode : MonoBehaviour
 
 
         }
-
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (other.gameObject.CompareTag("Fireball"))
+        if (collision.gameObject.CompareTag("Fireball"))
 
         {
             if (!iframes)
@@ -83,10 +77,14 @@ public class HealthCode : MonoBehaviour
                 ChangeHealth(-1);
                 iframes = true;
             }
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
 
         }
-       
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
 
         if (other.gameObject.CompareTag("Potion"))
         {

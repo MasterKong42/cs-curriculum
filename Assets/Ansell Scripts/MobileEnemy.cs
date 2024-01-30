@@ -39,6 +39,8 @@ public class Orc : MonoBehaviour
     {
         numTimer = 0.1f;
     }
+
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -53,16 +55,7 @@ public class Orc : MonoBehaviour
             
 
         }
-
-        if (collision.gameObject.CompareTag("Fireball"))
-        {
-            ChangeOrcHealth(-2);
-            iframes = true;
-            collider.radius = collider.radius + 1;
-            
-            Destroy(collision.gameObject);
-
-        }
+       
         if (collision.gameObject.CompareTag("PlayerProjectile"))
         {
             ChangeOrcHealth(-2);
@@ -72,6 +65,15 @@ public class Orc : MonoBehaviour
             Destroy(collision.gameObject);
 
         }
+        if (collision.gameObject.CompareTag("Fireball"))
+        {
+            ChangeOrcHealth(-2);
+            iframes = true;
+            collider.radius = collider.radius + 1;
+            Destroy(collision.gameObject);
+
+        
+    }
 
     }
 
@@ -96,8 +98,6 @@ public class Orc : MonoBehaviour
             collider.radius = collider.radius + 1.3f;
             isInRange = true;
         }
-            
-      
     }
 
     void OnTriggerExit2D(Collider2D other)

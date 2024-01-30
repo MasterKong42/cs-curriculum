@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.UIElements;
 
 public class OutSideMovement : MonoBehaviour
@@ -38,52 +39,56 @@ public class OutSideMovement : MonoBehaviour
         {
             xDirection = Input.GetAxis("Horizontal");
             xVector = xDirection * wSpeed * Time.deltaTime;
-            transform.position = transform.position + new Vector3(xVector, 0, 0);
+            transform.position = transform.position + new Vector3(xVector, 0);
 
             yDirection = Input.GetAxis("Vertical");
             yVector = yDirection * wSpeed * Time.deltaTime;
-            transform.position = transform.position + new Vector3(0, yVector, 0);
+            transform.position = transform.position + new Vector3(0, yVector);
         }
         else
 
         {
-            xDirection = Input.GetAxis("Horizontal");
-            xVector = xDirection * wSpeed * Time.deltaTime;
-            transform.position = transform.position + new Vector3(xVector, 0, 0);
+            playerInput = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+ 
+            if(canJump && Input.GetKeyDown(KeyCode.Space))
+            {
+                canJump = false;
+                shouldJump = true;
+            }
 
-           // if (canJump && Input.GetKeyDown(KeyCode.W))
-          // {
-            //    canJump = false;
-            //    shouldJump = true;
-            //}
+  
+        } 
+
+    }
+
+    
+    private void FixedUpdate()
+    {
+        // move
+        if(playerInput != Vector3.zero) {
+            rb.AddForce(playerInput * wSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        }
+     
+        // jump
+        if(shouldJump) {
+            rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
+            shouldJump = false;
         }
     }
-}
-// private void FixedUpdate()
-   // {
-        // move
-       // if (!(playerInput != Vector3.zero))
-       //{
-            //rb.AddForce(playerInput * wSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-       // }
-
-        // jump
-       // if (shouldJump)
-       // {
-       //     rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
-        //    shouldJump = false;
-        //}
-
-
-   // void OnCollisionEnter2D(Collision2D collider)
-   // {
+ 
+    private void OnCollisionEnter2D(Collision2D collider)
+    {
         // allow jumping again
-    //    canJump = true;
-    //    player.transform.tag = "onFloor";
+        canJump = true;
+    }
+ 
+    private void OnCollisionExit2D(Collision2D colldier)
+    {
+        player.transform.tag = "Jumping";
+    }
+}
 
-   // }
+           
+        
     
-  //  void OnCollisionExit2D(Collision2D collider)
-   // {
-      //  player.transform.tag = "Jumping";
-  //  }
+

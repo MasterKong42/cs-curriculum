@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/FireBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/MobileEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/PlayerMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/PlayerMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Shoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Top_Down/Fireball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,8 @@
       <workItem from="1704738947557" duration="3986000" />
       <workItem from="1704912104402" duration="2094000" />
       <workItem from="1705948252141" duration="3331000" />
-      <workItem from="1706120007922" duration="3434000" />
+      <workItem from="1706120007922" duration="3595000" />
+      <workItem from="1706639511988" duration="4138000" />
     </task>
     <servers />
   </component>
