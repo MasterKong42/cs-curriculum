@@ -85950,9 +85950,9 @@ MonoBehaviour:
   xVector: 0
   yDirection: 0
   shouldJump: 0
-  canJump: 0
+  canJump: 1
   jumpSpeed: 300
-  yVector: 5
+  yVector: 0
   rb: {fileID: 1750497414}
   player: {fileID: 1750497384}
   speed: 5

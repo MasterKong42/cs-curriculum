@@ -3299,12 +3299,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1856841597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731796b12bb8a42fa8049ecdc4301f5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 52a599608e0ad4f72827f6f499932645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Overworld: 0
   wSpeed: 0
   xDirection: 0
   xVector: 0
+  yDirection: 0
+  shouldJump: 0
+  canJump: 0
+  jumpSpeed: 6
+  yVector: 0
+  rb: {fileID: 0}
+  player: {fileID: 1856841597}
+  speed: 5
 --- !u!1 &1984272032
 GameObject:
   m_ObjectHideFlags: 0

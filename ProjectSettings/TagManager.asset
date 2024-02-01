@@ -16,6 +16,8 @@ TagManager:
   - MobileEnemy
   - PlayerBullet
   - playerProjectile
+  - onFloor
+  - Jumping
   layers:
   - Default
   - TransparentFX

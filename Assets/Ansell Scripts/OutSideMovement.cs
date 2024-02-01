@@ -19,9 +19,10 @@ public class OutSideMovement : MonoBehaviour
     private Vector3 playerInput;
     public Rigidbody2D rb;
     public GameObject player;
-
+    private float jTimer;
     public float speed = 5f;
-
+    
+    public bool jTimerRunning;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,15 +49,34 @@ public class OutSideMovement : MonoBehaviour
         else
 
         {
-            playerInput = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
- 
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.position -= new Vector3(speed * Time.deltaTime, 0f, 0f);
+            }
             if(canJump && Input.GetKeyDown(KeyCode.Space))
             {
                 canJump = false;
                 shouldJump = true;
+                jTimerReset();
+                jTimerRunning = true;
             }
 
-  
+            if (jTimerRunning)
+            {
+                jTimer -= Time.deltaTime;
+
+                if (jTimer <= 0)
+                {
+                    canJump = true;
+                    jTimerRunning = false;
+                }
+                
+            }
+
         } 
 
     }
@@ -70,7 +90,8 @@ public class OutSideMovement : MonoBehaviour
         }
      
         // jump
-        if(shouldJump) {
+        if(shouldJump)
+        {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
             shouldJump = false;
         }
@@ -80,11 +101,19 @@ public class OutSideMovement : MonoBehaviour
     {
         // allow jumping again
         canJump = true;
+        //player.transform.tag = "onFloor";
+        
     }
- 
-    private void OnCollisionExit2D(Collision2D colldier)
+    private void OnCollisionExit2D(Collision2D collider)
     {
-        player.transform.tag = "Jumping";
+        //player.transform.tag = "Jumping";
+        shouldJump = false;
+        
+    }
+
+    private void jTimerReset()
+    {
+        jTimer = 1.3f;
     }
 }
 
