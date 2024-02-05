@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class OutSideMovement : MonoBehaviour
 
 {
-    public bool Overworld;
+     public bool Overworld;
     public float wSpeed;
     public float xDirection;
     public float xVector;
@@ -21,6 +21,7 @@ public class OutSideMovement : MonoBehaviour
     public GameObject player;
     private float jTimer;
     public float speed = 5f;
+    
     
     public bool jTimerRunning;
     // Start is called before the first frame update
@@ -96,26 +97,15 @@ public class OutSideMovement : MonoBehaviour
             shouldJump = false;
         }
     }
- 
-    private void OnCollisionEnter2D(Collision2D collider)
-    {
-        // allow jumping again
-        canJump = true;
-        //player.transform.tag = "onFloor";
-        
-    }
-    private void OnCollisionExit2D(Collision2D collider)
-    {
-        //player.transform.tag = "Jumping";
-        shouldJump = false;
-        
-    }
+    
 
     private void jTimerReset()
     {
         jTimer = 1.3f;
     }
 }
+    
+
 
            
         
