@@ -20,6 +20,7 @@ public class HealthCode : MonoBehaviour
     {
         iframesTimer = iframesTimerDefault;
         hud = FindObjectOfType<HUD>();
+        hud.health = 10;
     }
 
     private void Update()

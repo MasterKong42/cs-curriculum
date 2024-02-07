@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/OutSideMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Animation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Animation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Overworld.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Platformer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Platformer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/toothless-dancing-toothless (1)_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/toothless-dancing-toothless (1)_0.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +130,8 @@
       <workItem from="1706639511988" duration="4176000" />
       <workItem from="1706810977171" duration="4670000" />
       <workItem from="1707157360870" duration="3543000" />
+      <workItem from="1707161980560" duration="269000" />
+      <workItem from="1707329688445" duration="2136000" />
     </task>
     <servers />
   </component>

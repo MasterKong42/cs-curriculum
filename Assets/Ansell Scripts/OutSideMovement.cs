@@ -103,6 +103,14 @@ public class OutSideMovement : MonoBehaviour
     {
         jTimer = 1.3f;
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("jumpSign"))
+        {
+            jumpSpeed = 7.5f;
+
+        }
+    }
 }
     
 
