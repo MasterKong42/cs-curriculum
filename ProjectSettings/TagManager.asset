@@ -18,6 +18,7 @@ TagManager:
   - playerProjectile
   - onFloor
   - Jumping
+  - jumpSign
   layers:
   - Default
   - TransparentFX
