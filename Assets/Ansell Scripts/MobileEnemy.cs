@@ -71,9 +71,8 @@ public class Orc : MonoBehaviour
             iframes = true;
             collider.radius = collider.radius + 1;
             Destroy(collision.gameObject);
-
         
-    }
+        }
 
     }
 
