@@ -9,26 +9,35 @@ public class MagicPlatfrom : MonoBehaviour
     private float originalYPosition;
     private float originalXPosition;
     public bool PlayerOn;
+    private bool PlayerOff;
+    private bool movedUp;
+    public Transform pointT;
+    public Transform pointI;
+    
+    private bool movedDown;
     // Start is called before the first frame update
     void Start()
     {
-        originalYPosition = transform.position.y;
-        originalXPosition = transform.position.x;
+       
+       
         PlayerOn = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerOn == true)
+        if (PlayerOn)
         {
-            transform.position -= new Vector3(0f, ySpeed * Time.deltaTime, 0f);
+            transform.position = Vector2.MoveTowards(transform.position, pointT.position, ySpeed * Time.deltaTime);
+            
 
         }
-        if (PlayerOn == false)
+        else
         {
-           
+            transform.position = Vector2.MoveTowards(transform.position, pointI.position, ySpeed * Time.deltaTime);
+            
         }
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -36,6 +45,7 @@ public class MagicPlatfrom : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerOn = true;
+            
         }
     }
     void OnCollisionExit2D(Collision2D collision)
