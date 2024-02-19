@@ -7,8 +7,6 @@
     <list default="true" id="dc822290-b0d9-40bf-ae06-0a1dac861f40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cs-curriculum/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ansell Scripts/MagicPlatfrom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ansell Scripts/MagicPlatfrom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Platformer/Materials/New Piskel (1).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Platformer/Materials/New Piskel (1).mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Platformer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Platformer.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,8 @@
       <workItem from="1707329688445" duration="2366000" />
       <workItem from="1707504760136" duration="1653000" />
       <workItem from="1707851918829" duration="1407000" />
-      <workItem from="1708023078557" duration="3357000" />
+      <workItem from="1708023078557" duration="3952000" />
+      <workItem from="1708366418121" duration="1315000" />
     </task>
     <servers />
   </component>

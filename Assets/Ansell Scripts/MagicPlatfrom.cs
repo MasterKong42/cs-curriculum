@@ -33,7 +33,7 @@ public class MagicPlatfrom : MonoBehaviour
 
         }
         else
-        {
+        { 
             transform.position = Vector2.MoveTowards(transform.position, pointI.position, ySpeed * Time.deltaTime);
             
         }
